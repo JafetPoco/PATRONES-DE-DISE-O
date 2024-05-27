@@ -34,14 +34,17 @@ public:
 };
 
 int main() {
-    ServicioConcretoA servicioA;
-    ServicioConcretoB servicioB;
+    Servicio *servicioA = new ServicioConcretoA();
+    Servicio *servicioB = new ServicioConcretoB();
 
-    Cliente clienteA(&servicioA);
+    Cliente clienteA(servicioA);
     clienteA.realizarTarea();
     
-    Cliente clienteB(&servicioB);
+    Cliente clienteB(servicioB);
     clienteB.realizarTarea();
+    
+    delete servicioA;
+    delete servicioB;
 
     return 0;
 }
