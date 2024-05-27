@@ -1,0 +1,10 @@
+*
+!*/
+!*.*
+*.o
+*.exe
+*.out
+!makefile
+**/build/
+build/
+
